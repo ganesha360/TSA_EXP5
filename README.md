@@ -66,10 +66,13 @@ plt.show()
 ```
 ### OUTPUT:
 ![image](https://github.com/user-attachments/assets/bd8a330c-bd74-4d37-b042-0d2af25827d7)
-
+## PLOTTING THE DATA:
 ![image](https://github.com/user-attachments/assets/8cc35a8f-3b46-483e-a289-79596aa552df)
+## SEASONAL PLOT REPRESENTATION:
 ![image](https://github.com/user-attachments/assets/4de28dc1-526f-47e2-861e-5dd6a566e328)
+## TREND PLOT REPRESENTATION:
 ![image](https://github.com/user-attachments/assets/a6dcdd11-73b4-4312-946e-65b04d3412f4)
+## OVERALL REPRESENTATION:
 ![image](https://github.com/user-attachments/assets/c0793ee4-8fdb-4a7f-a640-9cd93f6af5bd)
 
 ### RESULT:
