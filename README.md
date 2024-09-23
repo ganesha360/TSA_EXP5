@@ -1,9 +1,9 @@
-### Name: KARTHIKEYAN R
-### Reg.No: 212222240046
+### Name: GANESH R
+### Reg.No: 212222240029
 ### Date: 
 # Ex.No: 05  IMPLEMENTATION OF TIME SERIES ANALYSIS AND DECOMPOSITION
 ### AIM:
-To Illustrates how to perform time series analysis and decomposition on the Gold price Dataset.
+To Illustrates how to perform time series analysis and decomposition on the Amazon Stock Price Dataset.
 
 ### ALGORITHM:
 1. Import the required packages like pandas and numpy
@@ -17,28 +17,33 @@ To Illustrates how to perform time series analysis and decomposition on the Gold
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
-data = pd.read_csv('/content/Gold Price.csv')
+
+data = pd.read_csv('/content/Amazon.csv')
 print("FIRST FIVE ROWS:")
 print(data.head())
 data = data.head(120)  # Adjust this number as per your dataset's requirement
 data['Date'] = pd.date_range(start='1/1/2010', periods=len(data), freq='M')
 data.set_index('Date', inplace=True)
-# The 'Price' column is used here instead of 'Temperature'
-result = seasonal_decompose(data['Price'], model='additive', period=12) 
+
+
+result = seasonal_decompose(data['Volume'], model='additive', period=12) 
 print("\nPLOTTING THE DATA:")
 plt.figure(figsize=(10, 5))
-# The 'Price' column is used here instead of 'Temperature'
-plt.plot(data['Price']) 
+
+
+plt.plot(data['Volume']) 
 plt.title('Yearly Average price Over Time')
 plt.xlabel('Year')
 plt.ylabel('Price')
 plt.show()
+
 print("\nSEASONAL PLOT REPRESENTATION:")
 plt.figure(figsize=(10, 5))
 result.seasonal.plot()
 plt.title('Seasonal Decomposition')
 plt.ylabel('Seasonal Component')
 plt.show()
+
 print("\nTREND PLOT REPRESENTATION:")
 plt.figure(figsize=(10, 5))
 result.trend.plot()
@@ -46,6 +51,7 @@ plt.title('Trend Decomposition')
 plt.ylabel('Trend Component')
 plt.show()
 print("\nOVERALL REPRESENTATION:")
+
 fig, (ax1, ax2, ax3, ax4) = plt.subplots(4, 1, figsize=(10, 10))
 result.observed.plot(ax=ax1)
 ax1.set_ylabel('Observed')
@@ -59,11 +65,12 @@ plt.tight_layout()
 plt.show()
 ```
 ### OUTPUT:
-![image](https://github.com/user-attachments/assets/94c0f1b8-86c2-4b8f-bdb4-5fbb74f41132)
-![image](https://github.com/user-attachments/assets/b447ea51-08a0-4141-b9c0-16eb05cda742)
-![image](https://github.com/user-attachments/assets/b4e0f71c-311e-439e-afa5-93e9a9bfae12)
-![image](https://github.com/user-attachments/assets/19739e83-9097-4b3b-ab47-3913d2a0c8a2)
-![image](https://github.com/user-attachments/assets/2d0b5efd-1a27-4b65-9111-190b5d31f341)
+![image](https://github.com/user-attachments/assets/bd8a330c-bd74-4d37-b042-0d2af25827d7)
+
+![image](https://github.com/user-attachments/assets/8cc35a8f-3b46-483e-a289-79596aa552df)
+![image](https://github.com/user-attachments/assets/4de28dc1-526f-47e2-861e-5dd6a566e328)
+![image](https://github.com/user-attachments/assets/a6dcdd11-73b4-4312-946e-65b04d3412f4)
+![image](https://github.com/user-attachments/assets/c0793ee4-8fdb-4a7f-a640-9cd93f6af5bd)
 
 ### RESULT:
 Thus The python code has been created for the time series analysis and decomposition.
