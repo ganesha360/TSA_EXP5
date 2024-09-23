@@ -13,7 +13,7 @@ To Illustrates how to perform time series analysis and decomposition on the Amaz
 5. Display the overall results.
 
 ### PROGRAM:
-```
+```py
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
